@@ -19,3 +19,7 @@ O listas ordenadas
 8. porque sienpre se sigue el orden de los números naturales
 
 se puede agregar link a [google](https://google.com), entre otras cosas como tablas o imagenes, etc.
+
+La base de datos que quiero hacer es...
+
+Urilizare MySQL porque el profe dijo...
