@@ -13,3 +13,4 @@ Este repositorio corresponde a la unidad de aprendizaje de Bases de Datos Relaci
 
 - [Conceptos Basicos](Conceptos_Basicos.md)
 - [Tarea 1](Tarea1_Investigacion.md)
+- [Tarea 2](Tarea2_EntidadRelacion.md)
