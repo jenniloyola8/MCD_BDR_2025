@@ -4,12 +4,12 @@ _Autor:_ Jennifer Loyola Quintero
 ## Modelo entidad-relacion de la base de datos de ventas por region.
 ```mermaid
 erDiagram
-    CLIENTES ||--o|| VENTAS : realiza
-    VENTAS ||--|| DETALLE_VENTA : contiene
+    CLIENTES ||--o{ VENTAS : Realiza
+    VENTAS ||--{ DETALLE_VENTA : Contiene
     PRODUCTOS ||--o{ DETALLE_VENTA : vendido_en
 
     CLIENTES {
-        int id_cliente PK
+        int id_cliente 
         string nombre
         string ciudad
         string estado
@@ -17,22 +17,22 @@ erDiagram
     }
 
     VENTAS {
-        int id_venta PK
+        int id_venta 
         date fecha_venta
         decimal total
-        int id_cliente FK
+        int id_cliente 
     }
 
     DETALLE_VENTA {
-        int id_detalle PK
-        int id_venta FK
-        int id_producto FK
+        int id_detalle 
+        int id_venta 
+        int id_producto 
         int cantidad
         decimal subtotal
     }
 
     PRODUCTOS {
-        int id_producto PK
+        int id_producto 
         string nombre
         string categoria
         decimal precio
