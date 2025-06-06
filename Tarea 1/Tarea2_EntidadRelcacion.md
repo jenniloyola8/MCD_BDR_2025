@@ -5,7 +5,7 @@ _Autor:_ Jennifer Loyola Quintero
 ```mermaid
 erDiagram
     CLIENTES ||--o{ VENTAS : Realiza
-    VENTAS ||--{ DETALLE_VENTA : Contiene
+    VENTAS ||--|{ DETALLE_VENTA : Contiene
     PRODUCTOS ||--o{ DETALLE_VENTA : vendido_en
 
     CLIENTES {
