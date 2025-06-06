@@ -11,6 +11,6 @@ Este repositorio corresponde a la unidad de aprendizaje de Bases de Datos Relaci
 
 **Tareas:**
 
-- [Conceptos Basicos](Conceptos_Basicos.md)
-- [Tarea 1](Tarea1_Investigacion.md)
-- [Tarea 2](Tarea2_EntidadRelacion.md)
+- [Conceptos Basicos](https://github.com/jenniloyola8/MCD_BDR_2025/blob/main/Tarea%201/Conceptos_Basicos.md)
+- [Tarea 1](https://github.com/jenniloyola8/MCD_BDR_2025/blob/main/Tarea%201/Tarea1_Investigacion.md)
+- [Tarea 2](https://github.com/jenniloyola8/MCD_BDR_2025/blob/main/Tarea%201/Tarea2_EntidadRelacion.md)
