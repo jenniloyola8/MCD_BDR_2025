@@ -1,7 +1,7 @@
 # Modelo entidad relación.  
 _Autor:_ Jennifer Loyola Quintero
 
-## Modelo entidad-relacion de la base de datos de ventas por region.
+## Modelo relacional a partir de modelo entidad-relacion de la base de datos de ventas por region.
 ```mermaid
 erDiagram
     CLIENTES ||--o{ VENTAS : Realiza
