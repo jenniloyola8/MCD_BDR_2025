@@ -1,7 +1,20 @@
 # Modelo entidad relación.  
 _Autor:_ Jennifer Loyola Quintero
 
-## Modelo relacional a partir de modelo entidad-relacion de la base de datos de ventas por region.
+---
+
+## Modelo Entidad-Relación – Análisis de Ventas en Nuevo León
+
+Para el análisis de ventas en el estado de **Nuevo León**, organizamos los datos en una base de datos relacional estructurada. Esta base de datos permite representar las relaciones entre clientes, ventas, productos y detalles de cada venta.
+
+El modelo entidad-relación representa visualmente cómo se relacionan las entidades:
+
+- Un **cliente** puede hacer muchas **ventas**.
+- Cada **venta** puede incluir uno o más **productos**.
+- La relación entre una venta y los productos vendidos se almacena en la entidad intermedia **detalle_venta**.
+
+A continuación se muestra el equema del modelo relacional entidad-relación junto con los dominios de los atributos principales.
+
 ```mermaid
 erDiagram
     CLIENTES ||--o{ VENTAS : Realiza
@@ -38,6 +51,37 @@ erDiagram
         decimal precio
     }
 ````
+---
+
+##  Diagrama Relacional – Análisis de Ventas en Nuevo León
+
+A continuación, se presenta el modelo relacional derivado del esquema de análisis de ventas, adaptado para bases de datos como MySQL. Las relaciones incluyen llaves primarias (PK) y foráneas (FK) para estructurar adecuadamente la información.
+
+### CLIENTES
+- **id_cliente** (PK)
+- nombre
+- ciudad
+- estado
+- codigo_postal
+
+### VENTAS
+- **id_venta** (PK)
+- fecha_venta
+- total
+- **id_cliente** (FK → CLIENTES.id_cliente)
+
+### PRODUCTOS
+- **id_producto** (PK)
+- nombre
+- categoria
+- precio
+
+### DETALLE_VENTA
+- **id_detalle** (PK)
+- **id_venta** (FK → VENTAS.id_venta)
+- **id_producto** (FK → PRODUCTOS.id_producto)
+- cantidad
+- subtotal
 
 ---
 
@@ -80,3 +124,5 @@ Se unen todas las tablas para mostrar información completa sobre qué se vendi�
 
 **Explicación:**  
 Se agrupan las ventas por ciudad (dentro del estado de Nuevo León) y se suman los totales de ventas para obtener el monto total vendido en cada ciudad.
+
+---
