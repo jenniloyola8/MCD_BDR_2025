@@ -76,3 +76,5 @@ SELECT * FROM CLIENTES;
 SELECT * FROM VENTAS;
 SELECT * FROM PRODUCTOS;
 SELECT * FROM DETALLE_VENTA;
+
+-- Hasta el momento solo puse pocos datos aun estoy tratando de poner los demas.
