@@ -73,7 +73,7 @@ CREATE TABLE INDICADORES_MENSUALES (
     rem_mun_menor DECIMAL(14,2)
 );
 
--- Insertar clientes con base en municipios reales de Nuevo León
+-- Insertar clientes con base en municipios de Nuevo León
 INSERT INTO CLIENTES VALUES
 (1, 'Cliente Monterrey',  'Monterrey',      'Nuevo León', '64000'),
 (2, 'Cliente Apodaca',     'Apodaca',        'Nuevo León', '66600'),
@@ -81,15 +81,14 @@ INSERT INTO CLIENTES VALUES
 (4, 'Cliente Escobedo',    'Escobedo',       'Nuevo León', '66000'),
 (5, 'Cliente Garcia',      'García',         'Nuevo León', '66020');
 
--- Insertar productos (asegúrate de tener esta tabla previamente creada)
+-- Insertar productos 
 INSERT INTO PRODUCTOS VALUES 
 (1, 'Laptop HP', 'Electrónica', 15000.00),
 (2, 'Mouse Logitech', 'Accesorios', 350.00),
 (3, 'Audífonos Sony', 'Accesorios', 500.00),
 (4, 'Teclado Redragon', 'Accesorios', 640.00);
 
--- Insertar establecimientos reales (ejemplo usando IDs reales del DENUE)
--- Asegúrate de haber creado e importado la tabla ESTABLECIMIENTOS con estos IDs
+-- Insertar establecimientos 
 INSERT INTO ESTABLECIMIENTOS (id_establecimiento, nombre, tipo, sector, municipio, online) VALUES
 (101112, 'Tacos Don Julio', 'Micro', 'Alimentos y bebidas', 'Monterrey', FALSE),
 (101113, 'Farmacia San Jorge', 'Pequeña', 'Salud', 'Apodaca', TRUE),
@@ -97,7 +96,7 @@ INSERT INTO ESTABLECIMIENTOS (id_establecimiento, nombre, tipo, sector, municipi
 (101115, 'Carnicería El Toro', 'Micro', 'Alimentos', 'Guadalupe', FALSE),
 (101116, 'MiniSuper El Águila', 'Micro', 'Comercio minorista', 'Escobedo', TRUE);
 
--- Insertar ventas con referencia a establecimientos reales
+-- Insertar ventas con referencia a establecimientos 
 INSERT INTO VENTAS (id_venta, fecha_venta, total, id_cliente, id_establecimiento) VALUES
 (1, '2025-06-20', 150.00, 1, 101112),
 (2, '2025-06-21', 300.00, 2, 101113),
