@@ -16,3 +16,5 @@ Este repositorio corresponde a la unidad de aprendizaje de Bases de Datos Relaci
 - [Tarea 2](https://github.com/jenniloyola8/MCD_BDR_2025/blob/main/Tareas/Tarea2_EntidadRelacion.md)
 - [Tarea 3](https://github.com/jenniloyola8/MCD_BDR_2025/blob/main/Tareas/Tarea3_ModeloRelacional.md)
 - [Tarea 4](https://github.com/jenniloyola8/MCD_BDR_2025/blob/main/Tareas/Tarea4_BasedeDatos.md)
+- [Tarea 5](https://github.com/jenniloyola8/MCD_BDR_2025/blob/main/Tareas/Tarea5_DatosFicticios.md)
+- [Tarea 6](https://github.com/jenniloyola8/MCD_BDR_2025/blob/main/Tareas/Tarea6_Funciones.md)
