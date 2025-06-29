@@ -1,4 +1,4 @@
-# Creacion de Datos Ficticios o de otras fuentes de manera Automática
+# Uso de funciones de agregación 
 _Autor:_ Jennifer Loyola Quintero
 
 *Objetivo:*
