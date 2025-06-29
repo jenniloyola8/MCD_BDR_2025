@@ -75,32 +75,32 @@ CREATE TABLE INDICADORES_MENSUALES (
 
 -- Insertar clientes con base en municipios de Nuevo León
 INSERT INTO CLIENTES VALUES
-(1, 'Cliente Monterrey',      'Monterrey',      'Nuevo León', '64000'),
-(2, 'Cliente Apodaca',        'Apodaca',        'Nuevo León', '66600'),
-(3, 'Cliente San Nicolás',    'San Nicolás',    'Nuevo León', '66400'),
-(4, 'Cliente Escobedo',       'Escobedo',       'Nuevo León', '66000'),
-(5, 'Cliente Garcia',         'García',         'Nuevo León', '66020'),
-(6,  'Cliente Guadalupe',     'Guadalupe',      'Nuevo León', '67100'),
-(7,  'Cliente Santa Catarina','Santa Catarina', 'Nuevo León', '66350'),
-(8,  'Cliente Juárez',        'Juárez',         'Nuevo León', '67250'),
-(9,  'Cliente Linares',       'Linares',        'Nuevo León', '67700'),
-(10, 'Cliente Cadereyta',     'Cadereyta',      'Nuevo León', '67480'),
-(11, 'Cliente Sabinas',       'Sabinas Hidalgo','Nuevo León', '65200'),
-(12, 'Cliente Salinas',       'Salinas Victoria','Nuevo León','65500'),
-(13, 'Cliente Pesquería',     'Pesquería',      'Nuevo León', '66670'),
-(14, 'Cliente Zuazua',        'General Zuazua', 'Nuevo León', '65770'),
-(15, 'Cliente Allende',       'Allende',        'Nuevo León', '67350'),
-(16, 'Cliente Montemorelos',  'Montemorelos',   'Nuevo León', '67500'),
-(17, 'Cliente Santiago',      'Santiago',       'Nuevo León', '67300'),
-(18, 'Cliente Higueras',      'Higueras',       'Nuevo León', '65510'),
-(19, 'Cliente China',         'China',          'Nuevo León', '67920'),
-(20, 'Cliente Doctor Arroyo', 'Doctor Arroyo',  'Nuevo León', '67900');
+(1,  'Cliente Monterrey',     'Monterrey',       'Nuevo León', '64000'),
+(2,  'Cliente Apodaca',       'Apodaca',         'Nuevo León', '66600'),
+(3,  'Cliente San Nicolás',   'San Nicolás',     'Nuevo León', '66400'),
+(4,  'Cliente Escobedo',      'Escobedo',        'Nuevo León', '66000'),
+(5,  'Cliente Garcia',        'García',          'Nuevo León', '66020'),
+(6,  'Cliente Guadalupe',     'Guadalupe',       'Nuevo León', '67100'),
+(7,  'Cliente Santa Catarina','Santa Catarina',  'Nuevo León', '66350'),
+(8,  'Cliente Juárez',        'Juárez',          'Nuevo León', '67250'),
+(9,  'Cliente Linares',       'Linares',         'Nuevo León', '67700'),
+(10, 'Cliente Cadereyta',     'Cadereyta',       'Nuevo León', '67480'),
+(11, 'Cliente Sabinas',       'Sabinas Hidalgo', 'Nuevo León', '65200'),
+(12, 'Cliente Salinas',       'Salinas Victoria','Nuevo León', '65500'),
+(13, 'Cliente Pesquería',     'Pesquería',       'Nuevo León', '66670'),
+(14, 'Cliente Zuazua',        'General Zuazua',  'Nuevo León', '65770'),
+(15, 'Cliente Allende',       'Allende',         'Nuevo León', '67350'),
+(16, 'Cliente Montemorelos',  'Montemorelos',    'Nuevo León', '67500'),
+(17, 'Cliente Santiago',      'Santiago',        'Nuevo León', '67300'),
+(18, 'Cliente Higueras',      'Higueras',        'Nuevo León', '65510'),
+(19, 'Cliente China',         'China',           'Nuevo León', '67920'),
+(20, 'Cliente Doctor Arroyo', 'Doctor Arroyo',   'Nuevo León', '67900');
 
 
 -- Insertar productos 
 INSERT INTO PRODUCTOS VALUES  
-(1,  'Refresco 600ml',              'Alimentos y bebidas',   18.00),
-(2,  'Taco de Bistec',              'Alimentos y bebidas',   20.00),
+(1,  'Refresco 600ml',             'Alimentos y bebidas',   18.00),
+(2,  'Taco de Bistec',             'Alimentos y bebidas',   20.00),
 (3,  'Ibuprofeno 400mg',           'Farmacia',              45.00),
 (4,  'Shampoo 750ml',              'Farmacia',              95.00),
 (5,  'Pan de dulce',               'Alimentos y bebidas',   12.00),
@@ -123,26 +123,26 @@ INSERT INTO PRODUCTOS VALUES
 
 -- Insertar establecimientos 
 INSERT INTO ESTABLECIMIENTOS (id_establecimiento, nombre, tipo, sector, municipio, online) VALUES
-(101112, 'Tacos Don Julio', 'Micro', 'Alimentos y bebidas', 'Monterrey', FALSE),
-(101113, 'Farmacia San Jorge', 'Pequeña', 'Salud', 'Apodaca', TRUE),
-(101114, 'Miscelánea Lupita', 'Micro', 'Comercio minorista', 'San Nicolás', FALSE),
-(101115, 'Carnicería El Toro', 'Micro', 'Alimentos', 'Guadalupe', FALSE),
-(101116, 'MiniSuper El Águila', 'Micro', 'Comercio minorista', 'Escobedo', TRUE),
-(101117, 'Papelería El Sol',      'Micro',    'Comercio minorista', 'Guadalupe',       FALSE),
-(101118, 'Panadería Los Pinos',   'Micro',    'Alimentos',          'Santa Catarina',  FALSE),
-(101119, 'TechZone',              'Pequeña',  'Tecnología',         'Monterrey',       TRUE),
-(101120, 'Farmacia Nueva Vida',   'Pequeña',  'Salud',              'Linares',         FALSE),
-(101121, 'Bodega Express',        'Micro',    'Comercio minorista', 'Apodaca',         TRUE),
-(101122, 'Comida Doña Mary',      'Micro',    'Alimentos',          'Juárez',          FALSE),
-(101123, 'Super El Buen Precio',  'Pequeña',  'Comercio minorista', 'Cadereyta',       TRUE),
-(101124, 'Farmacia Popular',      'Micro',    'Salud',              'Sabinas Hidalgo', FALSE),
-(101125, 'Ferretería del Norte',  'Pequeña',  'Construcción',       'Santa Catarina',  TRUE),
-(101126, 'Refaccionaria El Motor','Micro',    'Automotriz',         'Escobedo',        FALSE),
-(101127, 'Tienda Naturista Luz',  'Micro',    'Salud',              'Santiago',        TRUE),
-(101128, 'Minisúper Don Beto',    'Micro',    'Comercio minorista', 'Montemorelos',    FALSE),
-(101129, 'Taquería El Güero',     'Micro',    'Alimentos',          'Zuazua',          FALSE),
-(101130, 'Abarrotes El 10',       'Micro',    'Comercio minorista', 'Allende',         TRUE),
-(101131, 'Miscelánea Lupita 2',   'Micro',    'Comercio minorista', 'Salinas Victoria',FALSE);
+(101112, 'Tacos Don Julio',       'Micro',    'Alimentos y bebidas', 'Monterrey',       FALSE),
+(101113, 'Farmacia San Jorge',    'Pequeña',  'Salud',               'Apodaca',         TRUE),
+(101114, 'Miscelánea Lupita',     'Micro',    'Comercio minorista',  'San Nicolás',     FALSE),
+(101115, 'Carnicería El Toro',    'Micro',    'Alimentos',           'Guadalupe',       FALSE),
+(101116, 'MiniSuper El Águila',   'Micro',    'Comercio minorista',  'Escobedo',        TRUE),
+(101117, 'Papelería El Sol',      'Micro',    'Comercio minorista',  'Guadalupe',       FALSE),
+(101118, 'Panadería Los Pinos',   'Micro',    'Alimentos',           'Santa Catarina',  FALSE),
+(101119, 'TechZone',              'Pequeña',  'Tecnología',          'Monterrey',       TRUE),
+(101120, 'Farmacia Nueva Vida',   'Pequeña',  'Salud',               'Linares',         FALSE),
+(101121, 'Bodega Express',        'Micro',    'Comercio minorista',  'Apodaca',         TRUE),
+(101122, 'Comida Doña Mary',      'Micro',    'Alimentos',           'Juárez',          FALSE),
+(101123, 'Super El Buen Precio',  'Pequeña',  'Comercio minorista',  'Cadereyta',       TRUE),
+(101124, 'Farmacia Popular',      'Micro',    'Salud',               'Sabinas Hidalgo', FALSE),
+(101125, 'Ferretería del Norte',  'Pequeña',  'Construcción',        'Santa Catarina',  TRUE),
+(101126, 'Refaccionaria El Motor','Micro',    'Automotriz',          'Escobedo',        FALSE),
+(101127, 'Tienda Naturista Luz',  'Micro',    'Salud',               'Santiago',        TRUE),
+(101128, 'Minisúper Don Beto',    'Micro',    'Comercio minorista',  'Montemorelos',    FALSE),
+(101129, 'Taquería El Güero',     'Micro',    'Alimentos',           'Zuazua',          FALSE),
+(101130, 'Abarrotes El 10',       'Micro',    'Comercio minorista',  'Allende',         TRUE),
+(101131, 'Miscelánea Lupita 2',   'Micro',    'Comercio minorista',  'Salinas Victoria',FALSE);
 
 
 -- Insertar ventas con referencia a establecimientos 
@@ -201,5 +201,5 @@ SELECT * FROM PRODUCTOS;
 SELECT * FROM DETALLE_VENTA;
 
 
--- Hasta el momento solo puse 20 datos, se me esta dificultando un poco la generalizacon te todos los datos ya que estoy limpiando la base que encontre.
+-- Hasta el momento solo puse 20 datos, se me esta dificultando un poco la generalizacon de todos los datos ya que estoy limpiando la base que encontre.
 ```
