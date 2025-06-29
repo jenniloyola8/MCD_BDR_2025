@@ -1,6 +1,28 @@
 # Creacion de Base de Datos, Tablas y Subida de Datos "Manual"
 _Autor:_ Jennifer Loyola Quintero
 
+Creacion de base de datos, tablas y subida de los datos de forma manual.
+
+La base de datos 'ventas_nuevoleon' está diseñada para registrar y analizar las ventas realizadas en establecimientos comerciales del estado de Nuevo León, México. Su estructura permite vincular clientes, productos, establecimientos y las transacciones realizadas entre ellos.
+Contiene las siguientes tablas principales:
+
+1. CLIENTES
+Registra información básica de los compradores, incluyendo nombre, municipio y código postal.
+
+2. PRODUCTOS
+Contiene el catálogo de productos disponibles para la venta, clasificados por categoría y precio.
+
+3. ESTABLECIMIENTOS
+Describe los comercios donde se realizan las ventas, incluyendo su tipo (micro, pequeña), sector económico, municipio y si operan en línea.
+
+4. VENTAS
+Almacena cada transacción realizada, vinculando al cliente y al establecimiento donde ocurrió, junto con la fecha y el total.
+
+5. DETALLE_VENTA
+Representa los productos específicos vendidos en cada venta (relación de muchos a muchos entre ventas y productos), indicando cantidad y subtotal.
+
+Hasta el momento solo puse 20 datos, se me esta dificultando un poco la generalizacon de todos los datos ya que estoy limpiando la base que encontre por lo que tuve que poner los datos de manera manual.
+
 ## Codigo en MySQL
 
 ```mysql
@@ -182,15 +204,15 @@ INSERT INTO DETALLE_VENTA VALUES
 (9,  8,  4, 1,  95.00),
 (10, 9, 10, 2,  50.00),
 (11, 9,  3, 1,  45.00),
-(12,10, 7, 1,  38.00),
-(13,10, 9, 1,  24.00),
-(14,11, 2, 5, 100.00),
-(15,11, 1, 2,  36.00),
-(16,12, 8, 2,  64.00),
-(17,13, 3, 1,  45.00),
-(18,14,17, 1, 230.00),
-(19,15,20, 1, 185.00),
-(20,16,16, 1,  90.00);
+(12, 10, 7, 1,  38.00),
+(13, 10, 9, 1,  24.00),
+(14, 11, 2, 5, 100.00),
+(15, 11, 1, 2,  36.00),
+(16, 12, 8, 2,  64.00),
+(17, 13, 3, 1,  45.00),
+(18, 14,17, 1, 230.00),
+(19, 15,20, 1, 185.00),
+(20, 16,16, 1,  90.00);
 
 
 -- Consultas para ver resultados
@@ -199,7 +221,4 @@ SELECT * FROM ESTABLECIMIENTOS;
 SELECT * FROM VENTAS;
 SELECT * FROM PRODUCTOS;
 SELECT * FROM DETALLE_VENTA;
-
-
--- Hasta el momento solo puse 20 datos, se me esta dificultando un poco la generalizacon de todos los datos ya que estoy limpiando la base que encontre.
 ```
