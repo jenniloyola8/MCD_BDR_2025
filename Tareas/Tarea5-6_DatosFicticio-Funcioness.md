@@ -115,12 +115,15 @@ _El uso de herramientas como FillDB acelera el desarrollo y pruebas en entornos 
 
 ### Dificultades encontradas
 - Error de generación de datos en FillDB: El sistema arrojaba errores como “Maximum retries of 10000 reached without finding a unique value” cuando se pedían más filas que valores únicos posibles para claves primarias ('id_cliente', 'id_producto', etc.).
+
 **_Solución:_** se utilizó AUTO_INCREMENT en las claves primarias.
 
 - Columnas vacías o sin datos generados: Algunas columnas (total, id_cliente, etc.) venían vacías al no tener definidos comentarios con pistas (-- float(...), -- integer(...)) en el esquema SQL.
+
 **_Solución:_** se añadieron comentarios con tipos de datos esperados según las recomendaciones de FillDB.
 
 - Cálculo de cuartiles y mediana en MySQL: Las versiones anteriores a MySQL 8 no soportan funciones como PERCENTILE_CONT(), lo que impidió calcular la mediana o cuartiles con funciones estándar.
+
 **_Solución:_** se implementó una técnica con LIMIT y OFFSET, además de variables de usuario (@row) para calcular posiciones centrales manualmente.
 
 ### Implementación de soluciones encontradas en línea
