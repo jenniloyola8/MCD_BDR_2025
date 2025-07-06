@@ -44,3 +44,46 @@ _Autor:_ Jennifer Loyola Quintero
   CREATE INDEX idx_venta_cliente ON VENTAS(id_cliente);
   CREATE INDEX idx_venta_establecimiento ON VENTAS(id_establecimiento);
   ```
+
+## Preguntas clave (Subconsultas)
+- ¿Qué cliente ha gastado más?
+Marta Ruiz con un total de $11,591.88
+  ```sql
+  CSELECT nombre, total_compras
+  FROM (
+    SELECT c.nombre, SUM(v.total) AS total_compras
+    FROM CLIENTES c
+    JOIN VENTAS v ON c.id_cliente = v.id_cliente
+    GROUP BY c.id_cliente
+  ) AS sub
+  ORDER BY total_compras DESC
+  LIMIT 1;
+  ```
+  
+
+- ¿Cuál es el producto más vendido por cantidad?
+Producto 33 con un total de 565 unidades vendidas
+```sql
+  SELECT nombre, total_vendido
+  FROM (
+    SELECT p.nombre, SUM(dv.cantidad) AS total_vendido
+    FROM PRODUCTOS p
+    JOIN DETALLE_VENTA dv ON p.id_producto = dv.id_producto
+    GROUP BY p.id_producto
+  ) AS sub
+  ORDER BY total_vendido DESC
+  LIMIT 1;
+  ```
+- ¿Municipio con más ventas por monto?
+Monterrey con un total de $561,066.41
+```sql
+  SELECT municipio, total_ventas
+  FROM (
+    SELECT e.municipio, SUM(v.total) AS total_ventas
+    FROM ESTABLECIMIENTOS e
+    JOIN VENTAS v ON e.id_establecimiento = v.id_establecimiento
+    GROUP BY e.municipio
+  ) AS sub
+  ORDER BY total_ventas DESC
+  LIMIT 1;
+  ```
