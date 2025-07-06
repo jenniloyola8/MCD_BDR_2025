@@ -47,7 +47,7 @@ _Autor:_ Jennifer Loyola Quintero
 
 ## Preguntas clave (Subconsultas)
 - ¿Qué cliente ha gastado más?
-Marta Ruiz con un total de $11,591.88
+  Marta Ruiz con un total de $11,591.88
   ```sql
   CSELECT nombre, total_compras
   FROM (
@@ -61,8 +61,8 @@ Marta Ruiz con un total de $11,591.88
   ```
 
 - ¿Cuál es el producto más vendido por cantidad?
-Producto 33 con un total de 565 unidades vendidas
-```sql
+  Producto 33 con un total de 565 unidades vendidas
+  ```sql
   SELECT nombre, total_vendido
   FROM (
     SELECT p.nombre, SUM(dv.cantidad) AS total_vendido
@@ -74,8 +74,8 @@ Producto 33 con un total de 565 unidades vendidas
   LIMIT 1;
   ```
 - ¿Municipio con más ventas por monto?
-Monterrey con un total de $561,066.41
-```sql
+  Monterrey con un total de $561,066.41
+  ```sql
   SELECT municipio, total_ventas
   FROM (
     SELECT e.municipio, SUM(v.total) AS total_ventas
