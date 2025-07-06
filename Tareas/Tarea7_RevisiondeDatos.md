@@ -59,7 +59,6 @@ Marta Ruiz con un total de $11,591.88
   ORDER BY total_compras DESC
   LIMIT 1;
   ```
-  
 
 - ¿Cuál es el producto más vendido por cantidad?
 Producto 33 con un total de 565 unidades vendidas
