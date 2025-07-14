@@ -46,7 +46,7 @@ _Autor:_ Jennifer Loyola Quintero
   ```
 
 ## Preguntas clave (Subconsultas)
-- ¿Qué cliente ha gastado más?
+- **¿Qué cliente ha gastado más?**
   Marta Ruiz con un total de $11,591.88
   ```sql
   CSELECT nombre, total_compras
@@ -60,7 +60,7 @@ _Autor:_ Jennifer Loyola Quintero
   LIMIT 1;
   ```
 
-- ¿Cuál es el producto más vendido por cantidad?
+- **¿Cuál es el producto más vendido por cantidad?**
   Producto 33 con un total de 565 unidades vendidas
   ```sql
   SELECT nombre, total_vendido
@@ -73,7 +73,7 @@ _Autor:_ Jennifer Loyola Quintero
   ORDER BY total_vendido DESC
   LIMIT 1;
   ```
-- ¿Municipio con más ventas por monto?
+- **¿Municipio con más ventas por monto?**
   Monterrey con un total de $561,066.41
   ```sql
   SELECT municipio, total_ventas
