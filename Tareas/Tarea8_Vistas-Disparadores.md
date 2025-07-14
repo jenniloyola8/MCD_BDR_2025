@@ -4,17 +4,18 @@ _Autor:_ Jennifer Loyola Quintero
 
 ---
 
-**Objetivo:** Facilitar el análisis, la consulta y la gestión de datos en una base de datos relacional de ventas (basada parcialmente en DENUE), mediante la creación de vistas y disparadores que:
-- Mejoren la legibilidad de los datos.
-- Eviten errores de actualización manual.
-- Permitan identificar patrones, excepciones o inconsistencias.
-- Sirvan como base para reportes o dashboards.
+> **Objetivo:** 
+    Facilitar el análisis, la consulta y la gestión de datos en una base de datos relacional de ventas (basada en DENUE), mediante la creación de vistas y disparadores que:
+        - Mejoren la legibilidad de los datos.
+        - Eviten errores de actualización manual.
+        - Permitan identificar patrones, excepciones o inconsistencias.
+        - Sirvan como base para reportes o dashboards.
 
 ## Crear vistas sobre consultas significativas, recurrentes, entre otras, las cuales:
 ### a) Vista con JOIN 
 - **¿Qué hace?**
-Combina varias tablas (VENTAS, CLIENTES, DETALLE_VENTA, PRODUCTOS y ESTABLECIMIENTOS) para mostrar un detalle completo de cada venta.
-Muestra una vista completa de cada venta: incluye el cliente, el establecimiento, los productos vendidos, la cantidad, el subtotal y la fecha.
+    Combina varias tablas (VENTAS, CLIENTES, DETALLE_VENTA, PRODUCTOS y ESTABLECIMIENTOS) para mostrar un detalle completo de cada venta.
+    Muestra una vista completa de cada venta: incluye el cliente, el establecimiento, los productos vendidos, la cantidad, el subtotal y la fecha.
 
 - **Contenido de la vista:**
     - Fecha de la venta.
@@ -23,8 +24,8 @@ Muestra una vista completa de cada venta: incluye el cliente, el establecimiento
     - Cantidad y subtotal.
     - Establecimiento donde se realizó la compra.
 
-- **Objetivo:**
-Tener una vista integrada de cada transacción para facilitar el análisis de ventas, como si fuera un reporte listo para visualizar.
+> **Objetivo:**
+    Tener una vista integrada de cada transacción para facilitar el análisis de ventas, como si fuera un reporte listo para visualizar.
 
 - **Codigo en MySQL**
 ``` sql
@@ -48,15 +49,15 @@ Tener una vista integrada de cada transacción para facilitar el análisis de ve
 
 ### b) Vista con LEFT JOIN
 - **¿Qué hace?**
-Incluye todos los clientes, incluso los que no tienen ventas. Muestra la información del cliente junto con el total de compras (si tiene).
+    Incluye todos los clientes, incluso los que no tienen ventas. Muestra la información del cliente junto con el total de compras (si tiene).
 
 - **Contenido de la vista:**
     - Nombre del cliente.
     - ID de cliente.
     - Total gastado (o NULL si no ha comprado nada).
 
-- **Objetivo:**
-Detectar clientes inactivos o nuevos y ayudar en campañas de seguimiento, marketing o fidelización.
+> **Objetivo:**
+    Detectar clientes inactivos o nuevos y ayudar en campañas de seguimiento, marketing o fidelización.
 
 - **Codigo en MySQL**
 ```sql 
@@ -74,15 +75,15 @@ Detectar clientes inactivos o nuevos y ayudar en campañas de seguimiento, marke
 
 ### c) Vista con RIGHT JOIN
 - **¿Qué hace?**
-Muestra todos los productos, incluso aquellos que no se han vendido aún. Muestra cantidad vendida y nombre.
+    Muestra todos los productos, incluso aquellos que no se han vendido aún. Muestra cantidad vendida y nombre.
 
 - **Contenido de la vista:**
     - ID del producto.
     - Nombre del producto.
     - Cantidad vendida (o NULL si no se ha vendido).
 
-- **Objetivo:**
-Detectar productos sin rotación, exceso de inventario o desactualizados.
+> **Objetivo:**
+    Detectar productos sin rotación, exceso de inventario o desactualizados.
 
 - **Codigo en MySQL**
 ```sql
@@ -101,7 +102,7 @@ Detectar productos sin rotación, exceso de inventario o desactualizados.
 
 ### d) Vista con subconsulta
 - **¿Qué hace?**
-Muestra sólo aquellas ventas cuyo monto total es mayor al promedio general de todas las ventas.
+    Muestra sólo aquellas ventas cuyo monto total es mayor al promedio general de todas las ventas.
 
 - **Contenido de la vista:**
     - ID de venta.
@@ -110,8 +111,8 @@ Muestra sólo aquellas ventas cuyo monto total es mayor al promedio general de t
     - Cliente.
     - Establecimiento.
 
-- **Objetivo:**
-Identificar ventas sobresalientes que pueden ser relevantes para estudios de alto consumo, promociones efectivas o comportamiento de clientes frecuentes.
+> **Objetivo:**
+    Identificar ventas sobresalientes que pueden ser relevantes para estudios de alto consumo, promociones efectivas o comportamiento de clientes frecuentes.
 
 - **Codigo en MySQL**
 ```sql
@@ -127,12 +128,12 @@ Identificar ventas sobresalientes que pueden ser relevantes para estudios de alt
 ## Crear almenos un disparador de inserción (TRIGGER), actualizacion o eliminacion.
 > TRIGGER:
 - **¿Qué hace?**
-Cada vez que se inserta un nuevo detalle de venta en DETALLE_VENTA, el disparador:
-    1. Calcula la suma de los subtotales para esa venta.
-    2. Actualiza el campo total en la tabla VENTAS.
+    Cada vez que se inserta un nuevo detalle de venta en DETALLE_VENTA, el disparador:
+        1. Calcula la suma de los subtotales para esa venta.
+        2. Actualiza el campo total en la tabla VENTAS.
 
-- **Objetivo:**
-Automatizar la actualización del total de una venta, eliminando errores manuales y asegurando que la información esté siempre consistente.
+> **Objetivo:**
+    Automatizar la actualización del total de una venta, eliminando errores manuales y asegurando que la información esté siempre consistente.
 
 - **Codigo en MySQL**
 ```sql
