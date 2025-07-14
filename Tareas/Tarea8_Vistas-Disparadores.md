@@ -11,7 +11,7 @@ _Autor:_ Jennifer Loyola Quintero
         - Permitan identificar patrones, excepciones o inconsistencias.
         - Sirvan como base para reportes o dashboards.
 
-## Crear vistas sobre consultas significativas, recurrentes, entre otras, las cuales:
+## Crear vistas (VIEW) sobre consultas significativas, recurrentes, entre otras, las cuales:
 ### a) Vista con JOIN 
 - **¿Qué hace?**
     Combina varias tablas (VENTAS, CLIENTES, DETALLE_VENTA, PRODUCTOS y ESTABLECIMIENTOS) para mostrar un detalle completo de cada venta.
