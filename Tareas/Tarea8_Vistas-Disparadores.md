@@ -12,20 +12,21 @@ _Autor:_ Jennifer Loyola Quintero
 
 ## Crear vistas sobre consultas significativas, recurrentes, entre otras, las cuales:
 ### a) Vista con JOIN 
-- _¿Qué hace?_
+- **¿Qué hace?**
 Combina varias tablas (VENTAS, CLIENTES, DETALLE_VENTA, PRODUCTOS y ESTABLECIMIENTOS) para mostrar un detalle completo de cada venta.
 Muestra una vista completa de cada venta: incluye el cliente, el establecimiento, los productos vendidos, la cantidad, el subtotal y la fecha.
 
-- _Contenido de la vista:_
+- **Contenido de la vista:**
     - Fecha de la venta.
     - Cliente que compró.
     - Producto comprado.
     - Cantidad y subtotal.
     - Establecimiento donde se realizó la compra.
 
-- _Objetivo:_
+- **Objetivo:**
 Tener una vista integrada de cada transacción para facilitar el análisis de ventas, como si fuera un reporte listo para visualizar.
 
+- **Codigo en MySQL**
 ``` sql
     CREATE OR REPLACE VIEW vista_ventas_detalladas AS
     SELECT 
@@ -46,17 +47,18 @@ Tener una vista integrada de cada transacción para facilitar el análisis de ve
 ```
 
 ### b) Vista con LEFT JOIN
-- _¿Qué hace?_
+- **¿Qué hace?**
 Incluye todos los clientes, incluso los que no tienen ventas. Muestra la información del cliente junto con el total de compras (si tiene).
 
-- _Contenido de la vista:_
+- **Contenido de la vista:**
     - Nombre del cliente.
     - ID de cliente.
     - Total gastado (o NULL si no ha comprado nada).
 
-- _Objetivo:_
+- **Objetivo:**
 Detectar clientes inactivos o nuevos y ayudar en campañas de seguimiento, marketing o fidelización.
 
+- **Codigo en MySQL**
 ```sql 
     CREATE OR REPLACE VIEW vista_clientes_ventas AS
     SELECT 
@@ -71,17 +73,18 @@ Detectar clientes inactivos o nuevos y ayudar en campañas de seguimiento, marke
 ```
 
 ### c) Vista con RIGHT JOIN
-- _¿Qué hace?_
+- **¿Qué hace?**
 Muestra todos los productos, incluso aquellos que no se han vendido aún. Muestra cantidad vendida y nombre.
 
-- _Contenido de la vista:_
+- **Contenido de la vista:**
     - ID del producto.
     - Nombre del producto.
     - Cantidad vendida (o NULL si no se ha vendido).
 
-- _Objetivo:_
+- **Objetivo:**
 Detectar productos sin rotación, exceso de inventario o desactualizados.
 
+- **Codigo en MySQL**
 ```sql
     CREATE OR REPLACE VIEW vista_productos_ventas AS
     SELECT 
@@ -97,19 +100,20 @@ Detectar productos sin rotación, exceso de inventario o desactualizados.
 ```
 
 ### d) Vista con subconsulta
-- _¿Qué hace?_
+- **¿Qué hace?**
 Muestra sólo aquellas ventas cuyo monto total es mayor al promedio general de todas las ventas.
 
-- _Contenido de la vista:_
+- **Contenido de la vista:**
     - ID de venta.
     - Fecha.
     - Total.
     - Cliente.
     - Establecimiento.
 
-- _Objetivo:_
+- **Objetivo:**
 Identificar ventas sobresalientes que pueden ser relevantes para estudios de alto consumo, promociones efectivas o comportamiento de clientes frecuentes.
 
+- **Codigo en MySQL**
 ```sql
     CREATE OR REPLACE VIEW vista_ventas_sobresalientes AS
     SELECT * FROM VENTAS
@@ -122,14 +126,15 @@ Identificar ventas sobresalientes que pueden ser relevantes para estudios de alt
 
 ## Crear almenos un disparador de inserción (TRIGGER), actualizacion o eliminacion.
 > TRIGGER:
-- _¿Qué hace?_
+- **¿Qué hace?**
 Cada vez que se inserta un nuevo detalle de venta en DETALLE_VENTA, el disparador:
     1. Calcula la suma de los subtotales para esa venta.
     2. Actualiza el campo total en la tabla VENTAS.
 
-- _Objetivo:_
+- **Objetivo:**
 Automatizar la actualización del total de una venta, eliminando errores manuales y asegurando que la información esté siempre consistente.
 
+- **Codigo en MySQL**
 ```sql
     DELIMITER $$
 

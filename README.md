@@ -18,3 +18,4 @@ Este repositorio corresponde a la unidad de aprendizaje de Bases de Datos Relaci
 - [Tarea 4](https://github.com/jenniloyola8/MCD_BDR_2025/blob/main/Tareas/Tarea4_BasedeDatos.md)
 - [Tarea 5-6](https://github.com/jenniloyola8/MCD_BDR_2025/blob/main/Tareas/Tarea5-6_DatosFicticio-Funcioness.md)
 - [Tarea 7](https://github.com/jenniloyola8/MCD_BDR_2025/blob/main/Tareas/Tarea7_RevisiondeDatos.md)
+- [Tarea 8](https://github.com/jenniloyola8/MCD_BDR_2025/blob/main/Tareas/Tarea8_Vistas-Disparadores.md)
