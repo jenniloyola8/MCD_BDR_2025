@@ -11,10 +11,10 @@ _Autor:_ Jennifer Loyola Quintero
         - Permitan identificar patrones, excepciones o inconsistencias.
         - Sirvan como base para reportes o dashboards.
 
-## Crear vistas (VIEW) sobre consultas significativas, recurrentes, entre otras, las cuales:
+## Crear vistas (`VIEW`) sobre consultas significativas, recurrentes, entre otras, las cuales:
 ### a) Vista con JOIN 
 - **¿Qué hace?**
-    Combina varias tablas (VENTAS, CLIENTES, DETALLE_VENTA, PRODUCTOS y ESTABLECIMIENTOS) para mostrar un detalle completo de cada venta.
+    Combina varias tablas (`VENTAS`, `CLIENTES`, `DETALLE_VENTA`, `PRODUCTOS` y `ESTABLECIMIENTOS`) para mostrar un detalle completo de cada venta.
     Muestra una vista completa de cada venta: incluye el cliente, el establecimiento, los productos vendidos, la cantidad, el subtotal y la fecha.
 
 - **Contenido de la vista:**
@@ -54,7 +54,7 @@ _Autor:_ Jennifer Loyola Quintero
 - **Contenido de la vista:**
     - Nombre del cliente.
     - ID de cliente.
-    - Total gastado (o NULL si no ha comprado nada).
+    - Total gastado (o `NULL` si no ha comprado nada).
 
 > **Objetivo:**
     Detectar clientes inactivos o nuevos y ayudar en campañas de seguimiento, marketing o fidelización.
@@ -80,7 +80,7 @@ _Autor:_ Jennifer Loyola Quintero
 - **Contenido de la vista:**
     - ID del producto.
     - Nombre del producto.
-    - Cantidad vendida (o NULL si no se ha vendido).
+    - Cantidad vendida (o `NULL` si no se ha vendido).
 
 > **Objetivo:**
     Detectar productos sin rotación, exceso de inventario o desactualizados.
@@ -125,10 +125,9 @@ _Autor:_ Jennifer Loyola Quintero
     SELECT * FROM vista_ventas_sobresalientes;
 ```
 
-## Crear almenos un disparador de inserción (TRIGGER), actualizacion o eliminacion.
-> TRIGGER:
+## Crear almenos un disparador de inserción (`TRIGGER`), actualizacion o eliminacion.
 - **¿Qué hace?**
-    Cada vez que se inserta un nuevo detalle de venta en DETALLE_VENTA, el disparador:
+    Cada vez que se inserta un nuevo detalle de venta en `DETALLE_VENTA`, el disparador:
         1. Calcula la suma de los subtotales para esa venta.
         2. Actualiza el campo total en la tabla VENTAS.
 
