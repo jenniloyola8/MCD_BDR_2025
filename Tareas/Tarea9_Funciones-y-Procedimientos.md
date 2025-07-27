@@ -18,6 +18,9 @@ Ejemplo: ¿a mayor x, también aumenta y?
 
 - establecimientos_similares
 Permite probar la función levenshtein, comparando nombres de empresas o marcas parecidas.
+
+---
+
 ## 1. Función contar_elementos_arreglo(cadena TEXT)
 **¿Qué hace?**
 Cuenta cuántos elementos hay en una cadena de texto separados por comas.
@@ -45,6 +48,17 @@ END;
 -- Probar función
 SELECT contar_elementos_arreglo('manzana,pera,uva') AS total_elementos;
 ```
+> **Interpretación:**
+    - La función identifica cuántas comas hay en la cadena y suma 1. Por lo tanto, la cantidad de elementos = número de comas + 1.
+    - Esto es útil cuando una columna contiene datos tipo lista, como: 'productoA,productoB,productoC'.
+
+ - **Aplicación real:**
+  Se puede usar para:
+    - Contar etiquetas asignadas a productos.
+    - Saber cuántas categorías tiene un artículo.
+    - Validar que no haya errores (por ejemplo, si el campo debía tener 3 valores y el resultado es distinto).
+
+---
 
 ## 2. Función levenshtein(s1, s2)
 **¿Qué hace?**
@@ -112,3 +126,31 @@ SELECT
   levenshtein(nombre1, nombre2) AS distancia_levenshtein
 FROM establecimientos_similares;
 ```
+
+**Resultados esperados (según inserciones):**
+
+|ID	|nombre1	            |nombre2	          |distancia_levenshtein    |
+|---|---------------------|-------------------|-------------------------|
+|1	|Farmacia Guadalajara	|Farma Guadalajara	|3–5 (según lógica usada) |
+|2	|Oxxo	                |Oxso	              |2                        |
+|3	|Superama	            |Superrama	        |1–2                      |
+
+> **Interpretación:**
+    - Una distancia baja (1-2) indica que los textos son muy similares.
+    - Distancias más altas (>5) indican textos diferentes.
+    - Esta métrica ayuda a detectar posibles errores ortográficos o nombres duplicados con diferencias mínimas.
+
+- **Aplicación real:**
+  - Detección de duplicados en nombres de empresas o productos.
+  - Corrección de errores ortográficos automáticamente.
+  - Recomendaciones automáticas tipo "¿Quisiste decir...?".
+
+---
+
+  ### Conclusión General
+|Elemento               |contar_elementos_arreglo                 |levenshtein                         |
+|-----------------------|-----------------------------------------|------------------------------------|
+|Tipo de función        |Escalar (devuelve número entero)         |Escalar (devuelve número entero)    |
+|Entrada esperada       |Texto con comas	                        |Dos cadenas de texto                |
+|Salida	                |Número de elementos separados por coma	  |Distancia (número de diferencias)   |
+|Aplicaciones prácticas |Contar etiquetas, validar entradas	      |Deduplicación, limpieza, comparación|
