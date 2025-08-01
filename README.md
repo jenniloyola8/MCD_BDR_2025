@@ -21,3 +21,4 @@ Este repositorio corresponde a la unidad de aprendizaje de Bases de Datos Relaci
 - [Tarea 8](https://github.com/jenniloyola8/MCD_BDR_2025/blob/main/Tareas/Tarea8_Vistas-Disparadores.md)
 - [Tarea 9](https://github.com/jenniloyola8/MCD_BDR_2025/blob/main/Tareas/Tarea9_Funciones-y-Procedimientos.md)
 - [Codigo SQL](https://github.com/jenniloyola8/MCD_BDR_2025/blob/main/Tareas/Codigo_ventas_nl.sql)
+- [Proyecto Final](https://github.com/jenniloyola8/MCD_BDR_2025/blob/main/Tareas/Proyecto-Final_Simulación-Sistema-Educativo.md)

@@ -247,6 +247,6 @@ Usamos Mockaroo para generar datos realistas y personalizados para cada tabla. E
 **Conclusión:** Mockaroo fue esencial para generar datos limpios, variados y listos para importar, lo que mejoró la calidad del sistema.
 
 ---
-**Fuentes:** 
+### Fuentes: 
 [Mockaroo](https://mockaroo.com)
 [Dummy Data](https://filldb.info/dummy/)
